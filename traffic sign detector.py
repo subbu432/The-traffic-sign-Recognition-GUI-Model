@@ -9,7 +9,6 @@ from sklearn.model_selection import train_test_split
 from tensorflow.keras.utils import to_categorical
 from keras.models import Sequential, load_model
 from keras.layers import Conv2D, MaxPool2D, Dense, Flatten, Dropout
-import pickle
 
 data = []
 labels = []
@@ -86,7 +85,7 @@ plt.figure(1)
 plt.plot(history.history['loss'], label='training loss')
 plt.plot(history.history['val_loss'], label='val loss')
 plt.title('Loss')
- plt.xlabel('epochs')
+plt.xlabel('epochs')
 plt.ylabel('loss')
 plt.legend()
 plt.show()
